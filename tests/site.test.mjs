@@ -25,6 +25,14 @@ test('the Slove page exposes the four approved games and no forbidden public nam
   assert.doesNotMatch(slove, /Lexio|New York Times/i);
 });
 
+test('the Didactiv homepage uses the education tagline and app showcase', () => {
+  const home = html('index.html');
+  assert.match(home, /Didactiv — aplicații educative simple și atente/);
+  assert.match(home, /<h2>Slove<\/h2>/);
+  assert.match(home, /class="brand-mark"[^>]*>D<\/span>/);
+  assert.doesNotMatch(home, /class="eyebrow"/);
+});
+
 test('every built page has Romanian metadata and legal navigation', () => {
   for (const file of builtHtmlFiles()) {
     const document = readFileSync(file, 'utf8');
@@ -34,6 +42,7 @@ test('every built page has Romanian metadata and legal navigation', () => {
     assert.match(document, /<link rel="canonical"/);
     assert.match(document, /Confidențialitate Slove/);
     assert.match(document, /Termeni de utilizare/);
+    assert.doesNotMatch(document, /class="eyebrow"/);
   }
 
   const home = html('index.html');

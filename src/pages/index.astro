@@ -5,30 +5,22 @@ import AppCard from '../components/AppCard.astro';
 import { apps } from '../data/apps';
 ---
 <BaseLayout
-  title="Didactiv — aplicații digitale cu sens"
-  description="Didactiv creează aplicații digitale simple, atente și ușor de folosit. Descoperă Slove, primul nostru proiect."
+  title="Didactiv — aplicații educative simple și atente"
+  description="Didactiv creează aplicații educative simple și atente. Descoperă Slove, primul nostru proiect."
   path="/"
 >
   <Hero
-    eyebrow="Didactiv"
-    title="Aplicații care îți lasă loc să gândești."
-    description="Construim experiențe digitale clare și liniștite, pornind de la lucruri care merită făcute bine."
-    actionHref="/slove/"
-    actionLabel="Descoperă Slove"
+    title="Didactiv — aplicații educative simple și atente"
+    description="Construim experiențe clare și liniștite, pornind de la lucruri care merită făcute bine."
   />
 
-  <section class="section-shell section-block" aria-labelledby="applications-title">
-    <div class="section-heading">
-      <p class="eyebrow">Primul proiect</p>
-      <h2 id="applications-title">Aplicațiile Didactiv</h2>
-    </div>
+  <section class="section-shell section-block app-showcase" aria-label="Aplicațiile Didactiv">
     <div class="app-list">
       {apps.map((app) => <AppCard app={app} />)}
     </div>
   </section>
 
   <section class="section-shell section-block about-section" id="despre" aria-labelledby="about-title">
-    <p class="eyebrow">Despre Didactiv</p>
     <h2 id="about-title">Mai puțin zgomot. Mai multă atenție.</h2>
     <p>Didactiv este un spațiu pentru aplicații mici, clare și folositoare. Fiecare produs pornește de la o idee simplă și păstrează doar ce ajută la o experiență bună.</p>
   </section>

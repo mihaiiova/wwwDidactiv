@@ -4,15 +4,19 @@ import StoreButtons from './StoreButtons.astro';
 
 interface Props { app: DidactivApp }
 const { app } = Astro.props;
+const preview = app.games[0];
 ---
 <article class="app-card">
-  <div class="app-card-icon"><img src={app.icon} alt={app.iconAlt} width="72" height="72" /></div>
   <div class="app-card-content">
-    <p class="eyebrow">Aplicație Didactiv</p>
-    <h3>{app.name}</h3>
+    <h2>{app.name}</h2>
     <p class="app-tagline">{app.tagline}</p>
     <p>{app.description}</p>
     <a class="text-link" href={`/${app.slug}/`}>Descoperă {app.name} <span aria-hidden="true">→</span></a>
     <StoreButtons stores={app.stores} />
   </div>
+  {preview?.image && (
+    <div class="app-card-preview">
+      <img src={preview.image} alt={`Captură din ${app.name}`} loading="lazy" width="660" height="1434" />
+    </div>
+  )}
 </article>

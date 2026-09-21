@@ -1,0 +1,15 @@
+---
+interface Props { brand?: string }
+const { brand = 'Didactiv' } = Astro.props;
+const isSlove = brand === 'Slove';
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label={`${brand} — pagina principală`}>
+    <img src={isSlove ? '/assets/slove-icon.png' : '/favicon.png'} alt="" width="32" height="32" />
+    <span>{brand}</span>
+  </a>
+  <nav aria-label="Navigație principală">
+    {isSlove ? <a href="/#despre">Despre Didactiv</a> : <a href="/slove/">Slove</a>}
+    {!isSlove && <a href="/#despre">Despre</a>}
+  </nav>
+</header>

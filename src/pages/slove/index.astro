@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ScreenshotGallery from '../../components/ScreenshotGallery.astro';
+import StoreButtons from '../../components/StoreButtons.astro';
+import { slove } from '../../data/apps';
+---
+<BaseLayout
+  title="Slove — Joacă-te cu limba română"
+  description="Slove este o colecție de jocuri scurte pentru a testa și exersa limba română."
+  path="/slove/"
+  ogImage={slove.icon}
+  brand="Slove"
+>
+  <Hero
+    eyebrow="Slove"
+    title="Joacă-te cu limba română."
+    description={slove.description}
+    actionHref="#jocuri"
+    actionLabel="Vezi jocurile"
+  />
+
+  <section class="slove-intro section-shell section-block" aria-labelledby="slove-intro-title">
+    <div>
+      <p class="eyebrow">În ritmul tău</p>
+      <h2 id="slove-intro-title">Un exercițiu scurt poate fi suficient.</h2>
+    </div>
+    <div class="slove-intro-copy">
+      <p>Slove aduce gramatica, vocabularul, expresiile și atenția la detalii într-o formă simplă. Alege un joc, răspunde, apoi continuă când ai chef.</p>
+      <p>{slove.audience}</p>
+    </div>
+  </section>
+
+  <section class="section-shell section-block" id="jocuri" aria-labelledby="games-title">
+    <div class="section-heading">
+      <p class="eyebrow">Patru feluri de a te juca</p>
+      <h2 id="games-title">Jocurile Slove</h2>
+    </div>
+    <div class="game-grid">
+      {slove.games.map((game, index) => (
+        <article class="game-card">
+          <div class={`game-number game-number-${index + 1}`} aria-hidden="true">0{index + 1}</div>
+          <h3>{game.title}</h3>
+          <p>{game.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell section-block screenshots-section" aria-labelledby="screenshots-title">
+    <div class="section-heading">
+      <p class="eyebrow">Vezi cum arată</p>
+      <h2 id="screenshots-title">Textul este în centru.</h2>
+    </div>
+    <ScreenshotGallery games={slove.games} />
+  </section>
+
+  <section class="section-shell section-block split-section" aria-labelledby="simple-title">
+    <div>
+      <p class="eyebrow">Simplu de început</p>
+      <h2 id="simple-title">Fără cont. Fără presiune.</h2>
+    </div>
+    <div>
+      <p>Nu ai nevoie de cont pentru a începe. Progresul de învățare rămâne pe dispozitivul tău, iar datele anonime limitate ne ajută să înțelegem cum sunt folosite jocurile.</p>
+      <StoreButtons stores={slove.stores} />
+    </div>
+  </section>
+</BaseLayout>

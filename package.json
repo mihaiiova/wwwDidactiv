@@ -11,10 +11,10 @@
     "validate": "npm run check && npm run build && npm test",
     "deploy": "npm run build && wrangler deploy"
   },
-  "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "astro": "^5.15.0",
-    "typescript": "^5.7.2",
-    "wrangler": "^4.34.0"
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "astro": "5.18.2",
+    "typescript": "5.9.3",
+    "wrangler": "4.136.1"
   }
 }

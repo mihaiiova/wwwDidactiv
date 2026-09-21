@@ -1,0 +1,13 @@
+---
+import type { Game } from '../data/apps';
+interface Props { games: Game[] }
+const { games } = Astro.props;
+---
+<div class="screenshot-gallery">
+  {games.map((game) => (
+    <figure class="screenshot-card">
+      <img src={game.image} alt={game.imageAlt} loading="lazy" width="660" height="1434" />
+      <figcaption>{game.title}</figcaption>
+    </figure>
+  ))}
+</div>

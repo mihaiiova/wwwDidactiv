@@ -76,7 +76,8 @@ p { margin: 0 0 1rem; }
 .game-number-2 { color: var(--blue); }.game-number-3 { color: var(--amber); }.game-number-4 { color: #52a860; }
 .screenshot-gallery { display: grid; gap: 1.25rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .screenshot-card { margin: 0; }
-.screenshot-card img { border: 1px solid var(--line); border-radius: 1rem; box-shadow: 0 12px 30px rgba(26,28,29,.08); }
+.screenshot-card img, .screenshot-placeholder { border: 1px solid var(--line); border-radius: 1rem; box-shadow: 0 12px 30px rgba(26,28,29,.08); }
+.screenshot-placeholder { align-items: center; aspect-ratio: 660 / 1434; background: var(--blue-soft); color: var(--muted); display: flex; justify-content: center; padding: 1rem; text-align: center; }
 .screenshot-card figcaption { color: var(--muted); font-size: .9rem; margin-top: .6rem; }
 .legal-page { max-width: 800px; padding-bottom: 6rem; padding-top: 4.5rem; }
 .legal-page h1 { font-size: clamp(2.4rem, 6vw, 4.3rem); font-weight: 400; letter-spacing: -.04em; line-height: 1.05; margin: .25rem 0 1.5rem; }

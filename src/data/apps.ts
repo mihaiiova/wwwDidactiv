@@ -1,8 +1,8 @@
 export type Game = {
   title: string;
   description: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export type StoreAvailability = {

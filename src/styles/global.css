@@ -81,16 +81,17 @@ p { margin: 0 0 1rem; }
 .app-card { background: var(--paper); border: 1px solid rgba(30, 41, 59, .06); border-radius: clamp(1.5rem, 2.5vw, 2.5rem); box-shadow: 0 1.5rem 4rem rgba(43, 57, 72, .10); display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr) minmax(200px, 300px); min-height: min(70vh, 720px); overflow: hidden; padding: clamp(2rem, 4vw, 4rem); scroll-snap-align: start; }
 .app-card-content { align-self: center; }
 .app-card-content > p:not(.app-tagline) { color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.2rem); line-height: 1.6; max-width: 580px; }
-.app-card h2 { font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; letter-spacing: -.04em; line-height: 1; }
+.app-card h2 { font-size: clamp(3rem, 8vw, 6rem); font-weight: 700; letter-spacing: -.04em; line-height: 1; margin-bottom: 1rem; }
 .app-card-preview { align-self: end; justify-self: end; max-width: 260px; width: clamp(150px, 32dvh, 260px); }
 
 .phone-frame { background: #15191d; border: 1px solid #30363b; border-radius: 2.25rem; box-shadow: 0 1.25rem 2rem rgba(21, 25, 29, .2); padding: .55rem; position: relative; }
 .phone-screen { background: var(--paper); border-radius: 1.75rem; overflow: hidden; }
 .phone-screen img { display: block; width: 100%; }
 .phone-speaker { background: #050607; border-radius: 999px; height: .28rem; left: 50%; position: absolute; top: .9rem; transform: translateX(-50%); width: 3.8rem; z-index: 1; }
-.app-tagline { font-size: clamp(1.35rem, 2.4vw, 1.6rem); line-height: 1.25; margin-bottom: .5rem; max-width: 560px; }
+.app-tagline { font-size: clamp(1.35rem, 2.4vw, 1.6rem); line-height: 1.25; margin-bottom: 1.5rem; max-width: 560px; }
 .text-link { font-weight: 700; }
 .store-buttons { align-items: center; display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
+.app-card .store-buttons { margin-top: 2.25rem; }
 .store-button { border-radius: 999px; display: inline-block; font-size: .87rem; padding: .5rem .9rem; text-decoration: none; }
 .store-button-app-store { background: #111820; border: 1px solid #111820; color: white; }
 .store-button-google-play { background: white; border: 1px solid #25303b; color: #111820; }

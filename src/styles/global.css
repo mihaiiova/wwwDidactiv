@@ -66,6 +66,17 @@ p { margin: 0 0 1rem; }
 .app-card-content > p:not(.app-tagline) { color: var(--muted); max-width: 580px; }
 .app-card h2 { font-size: clamp(3rem, 8vw, 6rem); }
 .app-card-preview { align-self: end; justify-self: end; max-width: 260px; width: clamp(150px, 32dvh, 260px); }
+.games-slide { display: block; }
+.games-slide-content { align-content: center; display: grid; height: 100%; }
+.games-slide h2 { font-size: clamp(2.75rem, 6vw, 5rem); margin-bottom: clamp(1.5rem, 4vh, 3rem); }
+.home-game-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.home-game-card { border: 1px solid var(--line); border-radius: 1rem; min-height: clamp(9rem, 20vh, 14rem); padding: clamp(1.25rem, 3vw, 2rem); }
+.home-game-card h3 { font-size: clamp(1.4rem, 2.5vw, 2.25rem); }
+.home-game-card p:last-child { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.3rem); margin-bottom: 0; }
+.home-game-number { color: var(--coral); font-family: system-ui, sans-serif; font-size: .85rem; font-weight: 700; margin-bottom: clamp(1rem, 3vh, 2rem); }
+.home-game-card-2 .home-game-number { color: var(--blue); }
+.home-game-card-3 .home-game-number { color: var(--amber); }
+.home-game-card-4 .home-game-number { color: #52a860; }
 .phone-frame { background: #15191d; border: 1px solid #30363b; border-radius: 2.25rem; box-shadow: 0 1.25rem 2rem rgba(21, 25, 29, .2); padding: .55rem; position: relative; }
 .phone-screen { background: var(--paper); border-radius: 1.75rem; overflow: hidden; }
 .phone-screen img { display: block; width: 100%; }
@@ -109,9 +120,10 @@ p { margin: 0 0 1rem; }
 @media (min-width: 700px) {
   .site-header { padding-left: 2rem; padding-right: 2rem; }
   .app-showcase-content { padding-left: 2rem; padding-right: 2rem; }
+  .app-list { grid-auto-rows: 100%; height: 100%; }
+  .app-card { height: 100%; min-height: 0; padding: 2rem; }
   .section-shell { padding-left: 2rem; padding-right: 2rem; }
   .hero { padding-bottom: 8rem; padding-top: 8rem; }
-  .app-card { padding: 2rem; }
   .slove-intro, .split-section { grid-template-columns: 1fr 1fr; }
   .footer-inner { padding-left: 2rem; padding-right: 2rem; }
 }
@@ -121,6 +133,9 @@ p { margin: 0 0 1rem; }
   .app-showcase-content { padding: 0; }
   .app-card { border-radius: 0; grid-template-columns: 1fr; min-height: 100%; }
   .app-card-preview { justify-self: center; max-width: 220px; width: clamp(140px, 26dvh, 220px); }
+  .games-slide-content { align-content: start; }
+  .home-game-grid { grid-template-columns: 1fr; }
+  .home-game-card { min-height: 0; }
   .game-grid, .screenshot-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .screenshot-card figcaption { font-size: .78rem; }
 }

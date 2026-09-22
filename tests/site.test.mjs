@@ -31,6 +31,9 @@ test('the Didactiv homepage uses the education tagline and app showcase', () => 
   assert.match(home, /Didactiv — aplicații educative simple și atente/);
   assert.match(home, /class="app-showcase-content"/);
   assert.match(home, /<h2>Slove<\/h2>/);
+  assert.match(home, /screenshots\/spot\.png/);
+  assert.match(home, /id="jocuri"/);
+  assert.match(home, /Jocurile Slove/);
   assert.match(home, /class="phone-frame"/);
   assert.match(home, /class="site-frame site-frame-home"/);
   assert.match(home, /store-button-app-store/);

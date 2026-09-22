@@ -29,7 +29,10 @@ test('the Didactiv homepage uses the education tagline and app showcase', () => 
   const home = html('index.html');
   assert.match(home, /Didactiv — aplicații educative simple și atente/);
   assert.match(home, /<h2>Slove<\/h2>/);
-  assert.match(home, /class="brand-mark"[^>]*>D<\/span>/);
+  assert.match(home, /class="phone-frame"/);
+  assert.match(home, /class="brand-tagline"/);
+  assert.doesNotMatch(home, /class="brand-mark"/);
+  assert.doesNotMatch(home, /Navigație principală|>Aplicații<|>Despre</);
   assert.doesNotMatch(home, /class="eyebrow"/);
 });
 

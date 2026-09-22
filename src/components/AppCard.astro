@@ -1,5 +1,6 @@
 ---
 import type { DidactivApp } from '../data/apps';
+import PhoneFrame from './PhoneFrame.astro';
 import StoreButtons from './StoreButtons.astro';
 
 interface Props { app: DidactivApp }
@@ -16,7 +17,7 @@ const preview = app.games[0];
   </div>
   {preview?.image && (
     <div class="app-card-preview">
-      <img src={preview.image} alt={`Captură din ${app.name}`} loading="lazy" width="660" height="1434" />
+      <PhoneFrame src={preview.image} alt={`Captură din ${app.name}`} loading="eager" />
     </div>
   )}
 </article>

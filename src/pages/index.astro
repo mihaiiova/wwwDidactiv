@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
 import AppCard from '../components/AppCard.astro';
 import { apps } from '../data/apps';
 ---
@@ -9,19 +8,10 @@ import { apps } from '../data/apps';
   description="Didactiv creează aplicații educative simple și atente. Descoperă Slove, primul nostru proiect."
   path="/"
 >
-  <Hero
-    title="Didactiv — aplicații educative simple și atente"
-    description="Construim experiențe clare și liniștite, pornind de la lucruri care merită făcute bine."
-  />
-
-  <section class="section-shell section-block app-showcase" aria-label="Aplicațiile Didactiv">
+  <h1 class="sr-only">Didactiv — aplicații educative simple și atente</h1>
+  <section class="section-shell section-block app-showcase" aria-label="Aplicații Didactiv">
     <div class="app-list">
       {apps.map((app) => <AppCard app={app} />)}
     </div>
-  </section>
-
-  <section class="section-shell section-block about-section" id="despre" aria-labelledby="about-title">
-    <h2 id="about-title">Mai puțin zgomot. Mai multă atenție.</h2>
-    <p>Didactiv este un spațiu pentru aplicații mici, clare și folositoare. Fiecare produs pornește de la o idee simplă și păstrează doar ce ajută la o experiență bună.</p>
   </section>
 </BaseLayout>

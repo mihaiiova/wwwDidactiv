@@ -14,6 +14,7 @@ interface Props {
 const { title, description, path = '/', ogImage, brand = 'Didactiv' } = Astro.props;
 const canonical = new URL(path, Astro.site ?? 'https://didactiv.ro');
 const image = ogImage ? new URL(ogImage, Astro.site ?? 'https://didactiv.ro') : undefined;
+const isHome = path === '/';
 ---
 <!doctype html>
 <html lang="ro">
@@ -33,9 +34,11 @@ const image = ogImage ? new URL(ogImage, Astro.site ?? 'https://didactiv.ro') : 
     {image && <meta property="og:image" content={image} />}
     <meta name="twitter:card" content="summary" />
   </head>
-  <body>
-    <Header brand={brand} />
-    <main id="main-content"><slot /></main>
-    <Footer />
+  <body class:list={{ 'home-body': isHome }}>
+    <div class:list={['site-frame', { 'site-frame-home': isHome }]}>
+      <Header brand={brand} showTagline={isHome} />
+      <main id="main-content"><slot /></main>
+      <Footer />
+    </div>
   </body>
 </html>

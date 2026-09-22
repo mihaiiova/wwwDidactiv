@@ -1,0 +1,15 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  loading?: 'eager' | 'lazy';
+}
+
+const { src, alt, loading = 'lazy' } = Astro.props;
+---
+<div class="phone-frame">
+  <div class="phone-speaker" aria-hidden="true"></div>
+  <div class="phone-screen">
+    <img src={src} alt={alt} loading={loading} width="660" height="1434" />
+  </div>
+</div>

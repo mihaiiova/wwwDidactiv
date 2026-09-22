@@ -5,7 +5,7 @@ const { stores } = Astro.props;
 const available = Boolean(stores.appStore || stores.googlePlay);
 ---
 <div class="store-buttons" aria-label="Disponibilitate aplicație">
-  {stores.appStore ? <a class="store-button" href={stores.appStore}>App Store</a> : <span class="store-button store-button-muted">App Store · În curând</span>}
-  {stores.googlePlay ? <a class="store-button" href={stores.googlePlay}>Google Play</a> : <span class="store-button store-button-muted">Google Play · În curând</span>}
+  {stores.appStore ? <a class="store-button store-button-app-store" href={stores.appStore}>App Store</a> : <span class="store-button store-button-app-store">App Store · În curând</span>}
+  {stores.googlePlay ? <a class="store-button store-button-google-play" href={stores.googlePlay}>Google Play</a> : <span class="store-button store-button-google-play">Google Play · În curând</span>}
   {!available && <span class="sr-only">Linkurile către magazine vor fi adăugate când aplicația va fi disponibilă.</span>}
 </div>

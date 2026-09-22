@@ -36,9 +36,18 @@ const isHome = path === '/';
   </head>
   <body class:list={{ 'home-body': isHome }}>
     <div class:list={['site-frame', { 'site-frame-home': isHome }]}>
+      {isHome && (
+        <div class="frame-shapes" aria-hidden="true">
+          <span class="shape shape-blue"></span>
+          <span class="shape shape-yellow"></span>
+          <span class="shape shape-green"></span>
+          <span class="shape shape-lavender"></span>
+          <span class="shape shape-blue-2"></span>
+        </div>
+      )}
       <Header brand={brand} showTagline={isHome} />
       <main id="main-content"><slot /></main>
-      <Footer />
+      <Footer minimal={isHome} />
     </div>
   </body>
 </html>

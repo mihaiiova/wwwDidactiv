@@ -20,6 +20,8 @@ export type DidactivApp = {
   iconAlt: string;
   stores: StoreAvailability;
   games: Game[];
+  previewImage?: string;
+  previewImageAlt?: string;
 };
 
 export const slove: DidactivApp = {
@@ -31,6 +33,8 @@ export const slove: DidactivApp = {
   icon: '/assets/slove-icon.png',
   iconAlt: 'Simbolul Slove, un S stilizat',
   stores: {},
+  previewImage: '/assets/screenshots/home.png',
+  previewImageAlt: 'Ecranul principal Slove cu lista de jocuri',
   games: [
     {
       title: 'Corect sau greșit?',

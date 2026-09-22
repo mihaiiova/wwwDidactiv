@@ -1,10 +1,15 @@
+---
+interface Props { minimal?: boolean }
+const { minimal = false } = Astro.props;
+---
 <footer class="site-footer">
   <div class="footer-inner">
-    <p><strong>Didactiv</strong> — aplicații educative simple și atente.</p>
+    {!minimal && <p><strong>Didactiv</strong> — aplicații educative simple și atente.</p>}
+    {minimal && <p class="footer-note">© 2026 Didactiv</p>}
     <nav aria-label="Linkuri legale">
       <a href="/confidentialitate/slove/">Confidențialitate Slove</a>
       <a href="/termeni/">Termeni de utilizare</a>
     </nav>
-    <p class="footer-note">© 2026 Didactiv</p>
+    {!minimal && <p class="footer-note">© 2026 Didactiv</p>}
   </div>
 </footer>

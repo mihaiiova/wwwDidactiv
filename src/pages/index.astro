@@ -1,22 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AppCard from '../components/AppCard.astro';
-import GameSlide from '../components/GameSlide.astro';
 import { apps } from '../data/apps';
 ---
 <BaseLayout
   title="Didactiv — aplicații educative simple și atente"
-  description="Didactiv creează aplicații educative simple și atente. Descoperă Slove, primul nostru proiect."
+  description="Didactiv creează aplicații educative simple și atente. Slove, primul nostru proiect, este o colecție de jocuri scurte cu limba română."
   path="/"
 >
   <section class="section-block app-showcase" aria-label="Aplicații Didactiv">
     <div class="app-showcase-content">
       <div class="app-list">
         {apps.map((app) => (
-          <>
-            <AppCard app={app} />
-            <GameSlide games={app.games} />
-          </>
+          <AppCard app={app} />
         ))}
       </div>
     </div>

@@ -8,10 +8,11 @@ import { apps } from '../data/apps';
   description="Didactiv creează aplicații educative simple și atente. Descoperă Slove, primul nostru proiect."
   path="/"
 >
-  <h1 class="sr-only">Didactiv — aplicații educative simple și atente</h1>
-  <section class="section-shell section-block app-showcase" aria-label="Aplicații Didactiv">
-    <div class="app-list">
-      {apps.map((app) => <AppCard app={app} />)}
+  <section class="section-block app-showcase" aria-label="Aplicații Didactiv">
+    <div class="app-showcase-content">
+      <div class="app-list">
+        {apps.map((app) => <AppCard app={app} />)}
+      </div>
     </div>
   </section>
 </BaseLayout>

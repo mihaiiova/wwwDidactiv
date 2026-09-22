@@ -27,7 +27,9 @@ test('the Slove page exposes the four approved games and no forbidden public nam
 
 test('the Didactiv homepage uses the education tagline and app showcase', () => {
   const home = html('index.html');
+  assert.match(home, /<h1 class="brand brand-heading">/);
   assert.match(home, /Didactiv — aplicații educative simple și atente/);
+  assert.match(home, /class="app-showcase-content"/);
   assert.match(home, /<h2>Slove<\/h2>/);
   assert.match(home, /class="phone-frame"/);
   assert.match(home, /class="site-frame site-frame-home"/);

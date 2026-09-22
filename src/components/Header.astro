@@ -4,9 +4,17 @@ const { brand = 'Didactiv', showTagline = false } = Astro.props;
 const isSlove = brand === 'Slove';
 ---
 <header class="site-header">
-  <a class="brand" href="/" aria-label={`${brand} — pagina principală`}>
-    {isSlove && <img src="/assets/slove-icon.png" alt="" width="32" height="32" />}
-    <span>{brand}</span>
-    {showTagline && <span class="brand-tagline">— aplicații educative simple și atente</span>}
-  </a>
+  {showTagline ? (
+    <h1 class="brand brand-heading">
+      <a href="/" aria-label="Didactiv — pagina principală">
+        <span>Didactiv</span>
+        <span class="brand-tagline">— aplicații educative simple și atente</span>
+      </a>
+    </h1>
+  ) : (
+    <a class="brand" href="/" aria-label={`${brand} — pagina principală`}>
+      {isSlove && <img src="/assets/slove-icon.png" alt="" width="32" height="32" />}
+      <span>{brand}</span>
+    </a>
+  )}
 </header>

@@ -45,11 +45,11 @@ body { margin: 0; min-width: 320px; line-height: 1.55; overflow-x: hidden; }
 .site-frame-home > .site-footer { position: relative; z-index: 1; }
 .site-frame-home .site-header { padding: 1rem var(--frame-pad-x); }
 .shape { position: absolute; }
-.shape-blue { animation: blob-drift 26s ease-in-out infinite, blob-morph-blue 20s ease-in-out infinite; background: var(--shape-blue); border-radius: 44% 56% 58% 42% / 52% 46% 54% 48%; height: clamp(22rem, 48vmax, 46rem); left: -16vmax; opacity: .55; top: -24vmax; width: clamp(22rem, 48vmax, 46rem); will-change: transform; }
-.shape-yellow { animation: blob-drift 22s ease-in-out -6s infinite, blob-morph-yellow 18s ease-in-out infinite; background: var(--shape-yellow); border-radius: 55% 45% 46% 54% / 48% 52% 46% 54%; height: clamp(18rem, 40vmax, 40rem); opacity: .5; right: -14vmax; top: -18vmax; width: clamp(18rem, 40vmax, 40rem); will-change: transform; }
-.shape-green { animation: blob-drift 30s ease-in-out -12s infinite, blob-morph-green 24s ease-in-out infinite; background: var(--shape-green); border-radius: 50% 50% 44% 56% / 46% 54% 50% 50%; bottom: -20vmax; height: clamp(20rem, 44vmax, 44rem); left: -12vmax; opacity: .5; width: clamp(20rem, 44vmax, 44rem); will-change: transform; }
-.shape-lavender { animation: blob-drift 24s ease-in-out -16s infinite, blob-morph-lavender 22s ease-in-out infinite; background: var(--shape-lavender); border-radius: 58% 42% 52% 48% / 46% 54% 44% 56%; height: clamp(16rem, 38vmax, 38rem); opacity: .5; right: -16vmax; top: 24%; width: clamp(16rem, 38vmax, 38rem); will-change: transform; }
-.shape-blue-2 { animation: blob-drift 20s ease-in-out -9s infinite, blob-morph-blue2 16s ease-in-out infinite; background: var(--shape-blue); border-radius: 50%; bottom: -12vmax; height: clamp(14rem, 30vmax, 30rem); left: 42%; opacity: .4; width: clamp(14rem, 30vmax, 30rem); will-change: transform; }
+.shape-blue { animation: blob-drift 48s ease-in-out infinite, blob-morph-blue 30s ease-in-out infinite; background: var(--shape-blue); border-radius: 44% 56% 58% 42% / 52% 46% 54% 48%; height: clamp(22rem, 48vmax, 46rem); left: -16vmax; opacity: .55; top: -24vmax; width: clamp(22rem, 48vmax, 46rem); will-change: transform; }
+.shape-yellow { animation: blob-drift 42s ease-in-out -10s infinite, blob-morph-yellow 28s ease-in-out infinite; background: var(--shape-yellow); border-radius: 55% 45% 46% 54% / 48% 52% 46% 54%; height: clamp(18rem, 40vmax, 40rem); opacity: .5; right: -14vmax; top: -18vmax; width: clamp(18rem, 40vmax, 40rem); will-change: transform; }
+.shape-green { animation: blob-drift 56s ease-in-out -20s infinite, blob-morph-green 34s ease-in-out infinite; background: var(--shape-green); border-radius: 50% 50% 44% 56% / 46% 54% 50% 50%; bottom: -20vmax; height: clamp(20rem, 44vmax, 44rem); left: -12vmax; opacity: .5; width: clamp(20rem, 44vmax, 44rem); will-change: transform; }
+.shape-lavender { animation: blob-drift 46s ease-in-out -24s infinite, blob-morph-lavender 32s ease-in-out infinite; background: var(--shape-lavender); border-radius: 58% 42% 52% 48% / 46% 54% 44% 56%; height: clamp(16rem, 38vmax, 38rem); opacity: .5; right: -16vmax; top: 24%; width: clamp(16rem, 38vmax, 38rem); will-change: transform; }
+.shape-blue-2 { animation: blob-drift 38s ease-in-out -14s infinite, blob-morph-blue2 26s ease-in-out infinite; background: var(--shape-blue); border-radius: 50%; bottom: -12vmax; height: clamp(14rem, 30vmax, 30rem); left: 42%; opacity: .4; width: clamp(14rem, 30vmax, 30rem); will-change: transform; }
 a { color: var(--blue); text-underline-offset: 0.18em; }
 a:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; border-radius: 3px; }
 img { display: block; max-width: 100%; height: auto; }
@@ -148,8 +148,9 @@ p { margin: 0 0 1rem; }
 
 @keyframes blob-drift {
   0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
-  33% { transform: translate3d(3vmax, 2vmax, 0) rotate(7deg) scale(1.05); }
-  66% { transform: translate3d(-2.5vmax, -3vmax, 0) rotate(-6deg) scale(0.96); }
+  25% { transform: translate3d(11vmax, -7vmax, 0) rotate(10deg) scale(1.07); }
+  50% { transform: translate3d(-9vmax, 8vmax, 0) rotate(-8deg) scale(0.94); }
+  75% { transform: translate3d(7vmax, 5vmax, 0) rotate(6deg) scale(1.04); }
 }
 @keyframes blob-morph-blue {
   0%, 100% { border-radius: 44% 56% 58% 42% / 52% 46% 54% 48%; }

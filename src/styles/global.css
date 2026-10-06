@@ -111,7 +111,12 @@ p { margin: 0 0 1rem; }
 .game-card { border: 1px solid var(--line); border-radius: 1rem; padding: 1.4rem; }
 .game-card p { color: var(--muted); margin-bottom: 0; }
 .game-number { color: var(--coral); font-size: .85rem; font-weight: 700; margin-bottom: 1.2rem; }
-.game-number-2 { color: var(--blue); }.game-number-3 { color: var(--amber); }.game-number-4 { color: #52a860; }
+.game-number-1 { color: var(--amber); }.game-number-2 { color: var(--blue); }.game-number-3 { color: var(--coral); }.game-number-4 { color: #52a860; }
+.faq-section h2 { margin-bottom: 2rem; }
+.faq-list { display: grid; gap: 1.5rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; }
+.faq-list > div { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.faq-list dt { font-size: 1.3rem; font-weight: 700; margin-bottom: .5rem; }
+.faq-list dd { color: var(--muted); margin: 0; }
 .screenshot-gallery { display: grid; gap: 1.25rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .screenshot-card { margin: 0; }
 .screenshot-placeholder { align-items: center; aspect-ratio: 660 / 1434; background: var(--blue-soft); border: 1px solid var(--line); border-radius: 1rem; color: var(--muted); display: flex; justify-content: center; padding: 1rem; text-align: center; }
@@ -138,6 +143,7 @@ p { margin: 0 0 1rem; }
   .app-card { border-radius: clamp(1.25rem, 4vw, 1.75rem); grid-template-columns: 1fr; min-height: 0; padding: 1.75rem 1.5rem; }
   .app-card-preview { justify-self: center; max-width: 220px; width: clamp(140px, 26dvh, 220px); }
   .game-grid, .screenshot-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .faq-list { grid-template-columns: 1fr; }
   .screenshot-card figcaption { font-size: .78rem; }
   .shape-blue { height: 60vmax; left: -26vmax; top: -34vmax; width: 60vmax; }
   .shape-yellow { height: 50vmax; right: -22vmax; top: -24vmax; width: 50vmax; }

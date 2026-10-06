@@ -37,6 +37,12 @@ export const slove: DidactivApp = {
   previewImageAlt: 'Ecranul principal Slove cu lista de jocuri',
   games: [
     {
+      title: 'Găsește greșeala',
+      description: 'Caută greșelile dintr-un text înainte să expire cele 60 de secunde.',
+      image: '/assets/screenshots/spot.png',
+      imageAlt: 'Ecran Slove pentru jocul Găsește greșeala',
+    },
+    {
       title: 'Corect sau greșit?',
       description: 'Alege varianta corectă și verifică-ți intuiția gramaticală.',
       image: '/assets/screenshots/grammar.png',
@@ -53,12 +59,6 @@ export const slove: DidactivApp = {
       description: 'Descoperă sensul expresiilor românești în contexte ușor de recunoscut.',
       image: '/assets/screenshots/idioms.png',
       imageAlt: 'Ecran Slove pentru jocul Vorba vine',
-    },
-    {
-      title: 'Găsește greșeala',
-      description: 'Caută greșelile dintr-un text înainte să expire cele 60 de secunde.',
-      image: '/assets/screenshots/spot.png',
-      imageAlt: 'Ecran Slove pentru jocul Găsește greșeala',
     },
   ],
 };

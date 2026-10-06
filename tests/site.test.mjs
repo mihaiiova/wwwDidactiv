@@ -22,6 +22,10 @@ test('the Slove page exposes the four approved games and no forbidden public nam
   for (const title of ['Corect sau greșit?', 'Ce înseamnă?', 'Vorba vine', 'Găsește greșeala']) {
     assert.match(slove, new RegExp(title.replace(/[?]/g, '\\?')));
   }
+  assert.ok(slove.indexOf('Găsește greșeala') < slove.indexOf('Corect sau greșit?'));
+  assert.match(slove, /Întrebări frecvente/);
+  assert.match(slove, /href="mailto:contact@didactiv\.ro"/);
+  assert.doesNotMatch(slove, /datele anonime limitate/);
   assert.doesNotMatch(slove, /Lexio|New York Times/i);
 });
 

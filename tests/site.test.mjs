@@ -25,7 +25,12 @@ test('the Slove page exposes the four approved games and no forbidden public nam
   assert.ok(slove.indexOf('Găsește greșeala') < slove.indexOf('Corect sau greșit?'));
   assert.match(slove, /Întrebări frecvente/);
   assert.match(slove, /href="mailto:contact@didactiv\.ro"/);
-  assert.doesNotMatch(slove, /datele anonime limitate/);
+  assert.match(slove, /class="hero hero-with-preview section-shell"/);
+  assert.match(slove, /class="hero-preview"/);
+  assert.match(slove, /assets\/screenshots\/home\.png/);
+  assert.match(slove, /App Store · În curând/);
+  assert.match(slove, /Google Play · În curând/);
+  assert.doesNotMatch(slove, /Vezi jocurile|datele anonime limitate/);
   assert.doesNotMatch(slove, /Lexio|New York Times/i);
 });
 

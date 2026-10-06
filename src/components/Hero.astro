@@ -1,14 +1,24 @@
 ---
+import PhoneFrame from './PhoneFrame.astro';
+import StoreButtons from './StoreButtons.astro';
+import type { StoreAvailability } from '../data/apps';
+
 interface Props {
   title: string;
   description: string;
-  actionHref?: string;
-  actionLabel?: string;
+  previewSrc: string;
+  previewAlt: string;
+  stores: StoreAvailability;
 }
-const { title, description, actionHref, actionLabel } = Astro.props;
+const { title, description, previewSrc, previewAlt, stores } = Astro.props;
 ---
-<section class="hero section-shell">
-  <h1>{title}</h1>
-  <p class="hero-description">{description}</p>
-  {actionHref && actionLabel && <a class="button button-primary" href={actionHref}>{actionLabel}</a>}
+<section class="hero hero-with-preview section-shell">
+  <div class="hero-copy">
+    <h1>{title}</h1>
+    <p class="hero-description">{description}</p>
+    <StoreButtons stores={stores} />
+  </div>
+  <div class="hero-preview">
+    <PhoneFrame src={previewSrc} alt={previewAlt} loading="eager" />
+  </div>
 </section>

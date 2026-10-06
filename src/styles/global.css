@@ -54,7 +54,7 @@ a { color: var(--blue); text-underline-offset: 0.18em; }
 a:focus-visible { outline: 3px solid var(--amber); outline-offset: 4px; border-radius: 3px; }
 img { display: block; max-width: 100%; height: auto; }
 .site-header { align-items: center; display: flex; justify-content: space-between; margin: 0 auto; max-width: var(--content-width); padding: 1.25rem; width: 100%; }
-.brand { align-items: baseline; color: var(--ink); display: inline-flex; font-size: 1.3rem; font-weight: 700; gap: .6rem; letter-spacing: -.01em; text-decoration: none; }
+.brand { align-items: center; color: var(--ink); display: inline-flex; font-size: 1.3rem; font-weight: 700; gap: .6rem; letter-spacing: -.01em; line-height: 1; text-decoration: none; }
 .brand-heading { margin: 0; }
 .brand-heading a { align-items: baseline; color: inherit; display: inline-flex; gap: .65rem; text-decoration: none; }
 .brand img { border-radius: 9px; }
@@ -64,6 +64,9 @@ img { display: block; max-width: 100%; height: auto; }
 .site-footer nav a:hover { color: var(--blue); text-decoration: underline; }
 .section-shell { margin: 0 auto; max-width: 1180px; padding-left: 1.25rem; padding-right: 1.25rem; }
 .hero { padding-bottom: 5.5rem; padding-top: 5rem; }
+.hero-with-preview { align-items: center; display: grid; gap: clamp(2rem, 5vw, 6rem); grid-template-columns: minmax(0, 1fr) minmax(240px, 360px); }
+.hero-preview { justify-self: center; max-width: 360px; width: 100%; }
+.hero-with-preview .store-buttons { margin-top: 2rem; }
 .hero h1 { font-size: clamp(2.75rem, 9vw, 6rem); font-weight: 400; letter-spacing: -.045em; line-height: 1.03; margin: .25rem 0 1.4rem; max-width: 1000px; }
 .hero-description { color: var(--muted); font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.45; max-width: 610px; }
 .button { border-radius: 999px; display: inline-block; font-weight: 700; margin-top: 1.2rem; padding: .8rem 1.3rem; text-decoration: none; }
@@ -143,6 +146,8 @@ p { margin: 0 0 1rem; }
   .app-card { border-radius: clamp(1.25rem, 4vw, 1.75rem); grid-template-columns: 1fr; min-height: 0; padding: 1.75rem 1.5rem; }
   .app-card-preview { justify-self: center; max-width: 220px; width: clamp(140px, 26dvh, 220px); }
   .game-grid, .screenshot-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-with-preview { grid-template-columns: 1fr; }
+  .hero-preview { max-width: 260px; }
   .faq-list { grid-template-columns: 1fr; }
   .screenshot-card figcaption { font-size: .78rem; }
   .shape-blue { height: 60vmax; left: -26vmax; top: -34vmax; width: 60vmax; }

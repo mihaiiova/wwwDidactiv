@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ScreenshotGallery from '../../components/ScreenshotGallery.astro';
-import StoreButtons from '../../components/StoreButtons.astro';
 import { slove } from '../../data/apps';
 ---
 <BaseLayout
@@ -15,8 +14,9 @@ import { slove } from '../../data/apps';
   <Hero
     title="Joacă-te cu limba română."
     description={slove.description}
-    actionHref="#jocuri"
-    actionLabel="Vezi jocurile"
+    previewSrc={slove.previewImage!}
+    previewAlt={slove.previewImageAlt!}
+    stores={slove.stores}
   />
 
   <section class="slove-intro section-shell section-block" aria-labelledby="slove-intro-title">
@@ -58,7 +58,6 @@ import { slove } from '../../data/apps';
     <div>
       <p>Nu ai nevoie de cont pentru a începe. Progresul de învățare rămâne pe dispozitivul tău. Nu urmărim utilizarea jocurilor și nu afișăm reclame.</p>
       <p>Exercițiile sunt incluse în aplicație și funcționează offline. Când ești online, aplicația poate descărca actualizări de conținut dintr-un serviciu static, fără a trimite răspunsurile, scorurile sau progresul tău.</p>
-      <StoreButtons stores={slove.stores} />
     </div>
   </section>
 

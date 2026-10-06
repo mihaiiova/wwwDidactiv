@@ -64,8 +64,8 @@ img { display: block; max-width: 100%; height: auto; }
 .site-footer nav a:hover { color: var(--blue); text-decoration: underline; }
 .section-shell { margin: 0 auto; max-width: 1180px; padding-left: 1.25rem; padding-right: 1.25rem; }
 .hero { padding-bottom: 5.5rem; padding-top: 5rem; }
-.hero-with-preview { align-items: center; display: grid; gap: clamp(2rem, 5vw, 6rem); grid-template-columns: minmax(0, 1fr) minmax(240px, 360px); }
-.hero-preview { justify-self: center; max-width: 360px; width: 100%; }
+.hero-with-preview { align-items: center; display: grid; gap: clamp(2rem, 5vw, 6rem); grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); }
+.hero-preview { justify-self: center; max-width: 260px; width: 100%; }
 .hero-with-preview .store-buttons { margin-top: 2rem; }
 .hero h1 { font-size: clamp(2.75rem, 9vw, 6rem); font-weight: 400; letter-spacing: -.045em; line-height: 1.03; margin: .25rem 0 1.4rem; max-width: 1000px; }
 .hero-description { color: var(--muted); font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.45; max-width: 610px; }
@@ -147,7 +147,7 @@ p { margin: 0 0 1rem; }
   .app-card-preview { justify-self: center; max-width: 220px; width: clamp(140px, 26dvh, 220px); }
   .game-grid, .screenshot-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-with-preview { grid-template-columns: 1fr; }
-  .hero-preview { max-width: 260px; }
+  .hero-preview { max-width: 220px; }
   .faq-list { grid-template-columns: 1fr; }
   .screenshot-card figcaption { font-size: .78rem; }
   .shape-blue { height: 60vmax; left: -26vmax; top: -34vmax; width: 60vmax; }
